@@ -52,7 +52,17 @@ namespace Day01
             }
             else if (p == 5)
             {
-                
+                Average_02();
+            }
+            else if (p == 6)
+            {
+                Console.Write("Введите a: ");
+                int a_2 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Введите b: ");
+                int b_2 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Введите c: ");
+                int c_2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ответ: " + Base_02(a_2, b_2, c_2));
             }
         }
 
@@ -77,9 +87,39 @@ namespace Day01
             return (((a + b) * h) * 1 / 2);
         }
 
-        public static double High_02 ()
+        public static void Average_02()
         {
-            return;
+            int p = 3;
+            double t = 4.1;
+            double k = Math.Sqrt(p * t);
+            double x = p * Math.Pow(t, 2) + Math.Sqrt(k);
+            double y = Math.Pow(Math.Tan(Math.Pow(x, 2)), 3) + k * t;
+            Console.WriteLine($"y: {y}\nx: {x}\nk: {k}");
+        }
+        public static void High_02 (int a, int b, int c)
+        {
+            if (a == 0)
+            {
+                Console.WriteLine("коэффициент a не равен 0");
+            }
+
+            double disc = Math.Pow(b, 2) - 4 * a * c;
+            Console.WriteLine($"Дискриминант равен: {disc}");
+            if (disc > 0)
+            {
+                double x1 = (-b + Math.Sqrt(disc)) / (2 * a);
+                double x2 = (-b - Math.Sqrt(disc)) / (2 * a);
+                Console.WriteLine($"Два корня: \n1 - {x1} \n2 - {x2}");
+            }
+            else if (disc == 0)
+            {
+                double x = -b / (2 * a);
+                Console.WriteLine($"Один корень: {x}");
+            }
+            else
+            {
+                Console.WriteLine("Нет корней!");
+            }
         }
     }
 }
