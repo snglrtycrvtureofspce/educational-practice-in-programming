@@ -1,0 +1,8 @@
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\bin\Debug\Day01.exe.config
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\bin\Debug\Day01.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\bin\Debug\Day01.pdb
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\obj\Debug\Day01.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\obj\Debug\Day01.csproj.SuggestedBindingRedirects.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\obj\Debug\Day01.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\obj\Debug\Day01.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day01\obj\Debug\Day01.pdb
