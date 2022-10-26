@@ -18,10 +18,13 @@ namespace Day08
             {
                 case 1:
                 {
-                    string s = "4190672H011PB3";
+                    string s = "4190672H011PB3" +
+                               "MC2520033";
                     Console.WriteLine("Исходная строка: "+ s);
-                    Regex regex = new Regex("[1-6]{1}[0-9]{6}[A-Z]{1}[0-9]{3}[GB|PB|BA|BI]{2}[0-9]{1}");
-                    Console.WriteLine("Ввод корректен? - " + regex.IsMatch(s));
+                    Regex regex = new Regex("(?i)[1-6]{1}[0-9]{6}[A-Z]{1}[0-9]{3}[GB|PB|BA|BI]{2}[0-9]{1}");
+                    Regex regex2 = new Regex("(?i)[A-Z]{2}[0-9]{7}");
+                    Console.WriteLine("Ввод идентификационного номера корректен? - " + regex.IsMatch(s));
+                    Console.WriteLine("Ввод номера паспорта корректен? - " + regex2.IsMatch(s));
                     break;
                 }
                 case 2:
@@ -39,10 +42,22 @@ namespace Day08
                 }
                 case 3:
                 {
-                    string s = "+375(33)358-94-89;15.11.2004;3sec";
+                    string s = "\n+375(33)358-94-89;15.11.2004;6sec\n" +
+                               "+375(33)358-94-89;15.11.2004;3sec\n" +
+                               "+375(33)358-94-89;15.11.2004;55sec\n" +
+                               "+375(33)358-94-89;15.11.2004;25sec\n" +
+                               "+375(33)358-94-89;15.11.2004;5min\n" +
+                               "+375(33)358-94-89;15.11.2004;27sec\n";
                     Console.WriteLine("Исходный текст: " + s);
                     Regex regex = new Regex("(?i)[0|1|2|3|4]{1}[sec|min]{3}");
-                    Console.WriteLine("Время связи меньше 5-ти секунд: " + regex.IsMatch(s));
+                    /* Console.WriteLine("Время связи меньше 5-ти секунд: " + regex.IsMatch(s));*/
+                    /*Regex.Matches(s, "(?i)[0|1|2|3|4]{1}[sec|min]{3}");*/
+                    Match tels = regex.Match(s);
+                    while (tels.Success)
+                    {
+                        Console.WriteLine(tels);
+                        tels = tels.NextMatch();
+                    }
                     break;
                 }
                 case 4:
