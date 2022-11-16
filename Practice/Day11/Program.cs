@@ -44,23 +44,20 @@ namespace Day11
                 list[i] = tab;
             }
             Console.Write("Введите название журнала: ");
-            
+            string _name = Console.ReadLine();
+            Console.Write("Введите тираж журнала: ");
+            int tir = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите год выхода журнала: ");
-            int year = Convert.ToInt32(Console.ReadLine());
+            int _year = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите месяц: ");
-            int month = Convert.ToInt32(Console.ReadLine());
+            int _month = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите день: ");
-            int day = Convert.ToInt32(Console.ReadLine());
-            DateTime data = new DateTime(year, month, day);
-            Magazine topGear = new Magazine()
-            for (int i = 0; i < size; i++)
-            {
-                int num = i + 1;
-                Console.WriteLine($"Статья номер {num}");
-                Console.WriteLine(list[i].ToString());
-            }
-            // Magazine Top = new Magazine("Top-Gear",,333)
+            int _day = Convert.ToInt32(Console.ReadLine());
+            DateTime data = new DateTime(_year, _month, _day);
+            Magazine topGear = new Magazine(_name, tir, data, list);
+            Console.WriteLine($"Реализация ToString: \n{topGear.ToString()}");
+            Console.WriteLine($"Реализация ToShortString: \n{topGear.ToShortString()}");
+            Console.ReadKey();
         }
-
     }
 }

@@ -44,7 +44,7 @@ namespace Day11
         }
         public override string ToString()
         {
-            return $"Имя: {this._name}\nФамилия: {this._surname}\nДень рождения {this._birthday}";
+            return $"Имя: {this._name}\nФамилия: {this._surname}\nДень рождения {this._birthday:dd:MM:yyyy}";
         }
         public virtual string ToShortString()
         {
