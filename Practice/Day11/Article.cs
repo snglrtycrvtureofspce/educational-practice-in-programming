@@ -25,5 +25,6 @@ namespace Day11
             return $"Имя: {this._author.Name}\nФамилия: {this._author.Surname}\nДень рождения {this._author.Birthday:dd:MM:yyyy}\nНазвание статьи: {this._name}\nРейтинг статьи: {this._rate}";
         }
 
+
     }
 }
