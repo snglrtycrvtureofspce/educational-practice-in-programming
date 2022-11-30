@@ -1,0 +1,8 @@
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\obj\Debug\extends_variant_2.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\obj\Debug\extends_variant_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\obj\Debug\extends_variant_2.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\bin\Debug\extends_variant_2.exe.config
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\bin\Debug\extends_variant_2.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\bin\Debug\extends_variant_2.pdb
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\obj\Debug\extends_variant_2.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\extends_variant_2\obj\Debug\extends_variant_2.pdb

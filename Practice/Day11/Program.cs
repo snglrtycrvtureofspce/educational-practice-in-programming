@@ -54,7 +54,9 @@ namespace Day11
             Console.Write("Введите день: ");
             int _day = Convert.ToInt32(Console.ReadLine());
             DateTime data = new DateTime(_year, _month, _day);
-            Magazine topGear = new Magazine(_name, tir, data, list);
+            Console.WriteLine("Выберите частоту выхода журнала:\n0 - еженедельно\n1 - ежемесячно\n2 - ежегодно");
+            Frequency frenk  = (Frequency)Convert.ToInt32(Console.ReadLine());
+            Magazine topGear = new Magazine(_name, frenk,tir, data, list);
             Console.WriteLine($"Реализация ToString: \n{topGear.ToString()}");
             Console.WriteLine($"Реализация ToShortString: \n{topGear.ToShortString()}");
             Console.ReadKey();

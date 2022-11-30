@@ -3,20 +3,20 @@ using System.Reflection.Emit;
 
 namespace Day11
 {
-    //public enum Frequency { Weekly, Monthly, Yearly }
+    public enum Frequency { Weekly, Monthly, Yearly }
     public class Magazine
     {
         private string _name; // название журнала
-        // private Frequency _frenk; // частота выхода журнала
+        private Frequency _frenk; // частота выхода журнала
         private int _circulation; // тираж
         private DateTime _date; // дата выхода журнала
         private Article[] _list; // список статей в журнале
         int _size;
-        public Magazine(string name,/*Frequency frenk,*/int circulation,DateTime create, params Article[] list) // конструктор без параметров 
+        public Magazine(string name,Frequency frenk,int circulation,DateTime create, params Article[] list) // конструктор без параметров 
         {
             this._name = name;
             this._circulation = circulation;
-            //this._fr = fr;
+            this._frenk = frenk;
             this._list = list;
             this._date = create;
             this._size = list.Length;
@@ -70,7 +70,7 @@ namespace Day11
         }*/
         public override string ToString()
         {
-            string text = $"Название журнала: {_name}\nТираж: {_circulation}\nДень выхода журнала: {_date:dd:MM:yyyy}\nСтатьи находящиеся в журнале:\n";
+            string text = $"Название журнала: {_name}\nТираж: {_circulation}\nДень выхода журнала: {_date:dd:MM:yyyy}\nЧастота выхода журнала: {this._frenk}\nСтатьи находящиеся в журнале:\n";
             for (int i = 0; i < _list.Length; i++)
             {
                 text += _list[i]._name + "\n";
