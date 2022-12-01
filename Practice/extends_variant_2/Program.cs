@@ -25,8 +25,6 @@ namespace extends_variant_2
             recA.Perimetr();
             Console.WriteLine(rec.ToString());
             rec.Perimetr();
-            (recA as Triangle).Perimetr();
-            ((Triangle)rec).Perimetr();
             var bs = new List<Figure>
                         {
                             rec,
@@ -36,8 +34,8 @@ namespace extends_variant_2
 
             foreach (var item in bs)
             {
-                Console.WriteLine(item.ToString()); // для всех
-                if (item is Rectangle) (item as Rectangle).Perimetr(); // только для тех  у кого реализован метод Service
+                Console.WriteLine(item.Perimetr());
+                if (item is Rectangle) (item as Rectangle).Perimetr();
                 
             }
         }
