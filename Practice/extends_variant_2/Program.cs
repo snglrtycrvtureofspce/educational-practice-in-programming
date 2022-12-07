@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace extends_variant_2
+namespace extends_variant2
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Rectangle recA = new Triangle(21, 23, 4);
-            Triangle rec = new Triangle(8, 4, 71);
+            var rec = new Triangle(8, 4, 71);
             Console.WriteLine("----------Родитель - Rectangle, дочерний - Triangle----------");
             Console.WriteLine(recA.ToString());
             Console.WriteLine("----------Triangle - как Triangle----------");

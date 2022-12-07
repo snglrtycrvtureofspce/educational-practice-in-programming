@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace extends_variant_2
+namespace extends_variant2
 {
     abstract class Figure
     {

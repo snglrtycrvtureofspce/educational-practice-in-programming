@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Theme_2_variant_13
+namespace extends_theme2_variant13
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             char p;
-            Console.Write("Введите целое число: "); int N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите целое число: "); 
+            var N = Convert.ToInt32(Console.ReadLine());
             if(N % 11 == 0)
             {
                 p = 'A';

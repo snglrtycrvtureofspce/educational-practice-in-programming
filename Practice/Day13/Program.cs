@@ -16,12 +16,17 @@ namespace Day13
             {
                 case 1:
                 {
-                    Console.WriteLine("Класс-родитель" +
-                                      "\n____________");
+                    Console.WriteLine($"Класс-родитель ({typeof(Time)})");
                     Time tm = new Time(2, 30, 40);
                     Console.WriteLine(tm.ToString());
-                    Console.WriteLine($"Количество полных минут в указанном промежутке: {tm.count_minutes()}мин");
+                    Console.WriteLine("Количество полных минут в указанном промежутке: " +
+                                      $"{tm.count_minutes()}мин");
                     Console.WriteLine($"Уменьшаем время на десять минут: {tm.minus_minutes()}мин");
+                    Console.WriteLine("______________________________________________________" +
+                                      $"\nДочерний класс ({typeof(Abonent)})");
+                                      Abonent a = new Abonent("Иванова", "МТС", 1, 33, 2);
+                    Console.WriteLine(a.ToString());
+                    a.Preferential();
                     break;
                 }
                 default:
