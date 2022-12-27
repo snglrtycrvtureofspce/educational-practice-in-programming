@@ -44,13 +44,50 @@ namespace Day11
         }
         public override string ToString()
         {
-            return $"Имя: {this._name}\nФамилия: {this._surname}\nДень рождения {this._birthday:dd:MM:yyyy}";
+            return $"Имя: {this._name}" +
+                   $"\nФамилия: {this._surname}" +
+                   $"\nДень рождения {this._birthday:dd:MM:yyyy}";
         }
         public virtual string ToShortString()
         {
-            return $"Имя: {this._name}\nФамилия: {this._surname}";
+            return $"Имя: {this._name}" +
+                   $"\nФамилия: {this._surname}";
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public static bool operator ==(Person a, Person b)
+        {
+            if(a._name == b._name && a._birthday == b._birthday && a._surname == b._surname)
+            {
+                return true;
+            }
+            return false;
+            
+        }
+        public static bool operator !=(Person a, Person b)
+        {
+            if (a._name == b._name && a._birthday == b._birthday && a._surname == b._surname)
+            {
+                return false;
+            }
+            return true;
+        }
+        public override int GetHashCode()
+        {
+            return this._name.GetHashCode();
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
     
 }
