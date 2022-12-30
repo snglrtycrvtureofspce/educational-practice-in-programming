@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Day16
 {
@@ -13,47 +14,40 @@ namespace Day16
             Pressure = pressure;
         }
 
+        public delegate void WeatherStationDelegate(string message);
+        public event WeatherStationDelegate Notify;
         public void UpTemp(int temp) // повысить температуру
         {
-            this.Temperature += temp;
+            Notify?.Invoke($"Температура увеличена.\nТемпература: {temp}");
         }
         public void DownTemp(int temp) // понизить температуру
         {
-            this.Temperature -= temp;
+            if (Temperature <= temp)
+            {
+                Temperature -= temp;
+                Notify?.Invoke($"Температура понижена.\nТемпература: {temp}");
+            }
+            else
+            {
+                Notify?.Invoke($"Температура не понижена.\nТемпература: {temp}");
+            }
         }
         public void UpPressure(int pres) // повысить давление
         {
-            this.Pressure += pres;
+            Notify?.Invoke($"Давление увеличено.\nТемпература: {pres}");
         }
         public void DownPressure(int pres) // понизить давление
         {
-            this.Pressure -= pres;
-        }
-        public delegate void AccountHandler(string message);
-
-        public event AccountHandler TempBelowZero; // температура ниже нуля
-        public event AccountHandler TempAboveZero; // температура выше нуля
-        public event AccountHandler PressureDeclining; // давление понижается
-        public event AccountHandler PressureRises; // давление повышается
-
-        protected virtual void OnTempBelowZero(string message)
-        {
-            TempBelowZero?.Invoke(message);
-        }
-
-        protected virtual void OnTempAboveZero(string message)
-        {
-            TempAboveZero?.Invoke(message);
-        }
-
-        protected virtual void OnPressureDeclining(string message)
-        {
-            PressureDeclining?.Invoke(message);
-        }
-
-        protected virtual void OnPressureRises(string message)
-        {
-            PressureRises?.Invoke(message);
+            if (Temperature <= pres)
+            {
+                Temperature -= pres;
+                Notify?.Invoke($"Давление понижено.\nДавление: {pres}");
+            }
+            else
+            {
+                Notify?.Invoke($"Давление не понижено.\nДавление: {pres}");
+            }
+            
         }
     }
 }

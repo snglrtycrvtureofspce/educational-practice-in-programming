@@ -16,8 +16,24 @@ namespace Day16
             {
                 case 1:
                 {
-                    WeatherStation station = new WeatherStation(4, 5);
-                    station.PressureDeclining += DisplayMessage;
+                    WeatherStation firstsStation = new WeatherStation(24, 120);
+                    firstsStation.Notify += DisplayMessage;
+                    firstsStation.UpTemp(50);
+                    Console.WriteLine($"Температура: {firstsStation.Temperature}");
+                    firstsStation.DownTemp(50);
+                    Console.WriteLine(" ");
+                    firstsStation.UpPressure(80);
+                    Console.WriteLine($"Давление: {firstsStation.Pressure}");
+                    firstsStation.DownPressure(80);
+                    void DisplayMessage(string message) => Console.WriteLine(message);
+                    break;
+                }
+                case 2:
+                {
+                    var post = new PostOffice();
+                    Abonents.Post1(post, 1, 363);
+                    Abonents.Post2(post, 2, -98);
+                    Abonents.Post3(post, 4, 23);
                     break;
                 }
                 default:
@@ -25,15 +41,6 @@ namespace Day16
                     Console.WriteLine("Exit...");
                     break;
                 }
-            }
-            void DisplayMessage(string message) => Console.WriteLine(message);
-            void DisplayRedMessage(string message)
-            {
-                // Устанавливаем красный цвет символов
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(message);
-                // Сбрасываем настройки цвета
-                Console.ResetColor();
             }
         }
 
