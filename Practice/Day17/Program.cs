@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,16 +21,18 @@ namespace Day17
                     const string path = "numbers.txt";
                     var writer = new StreamWriter(path);
                     var num = 0;
-                    var arr = Enumerable.Range(-6, 300).Select(x => x);
                     for (var i = -6; i < 301; i++)
                     {
                         try
                         {
-                            writer.WriteLine(i);
-                            num++;
+                            if (i % 2 == 0)
+                            {
+                                writer.WriteLine(i + ",");
+                                num++;
+                            }
+                            
                             if (i != 300) continue;
-                            Console.WriteLine("Запись прошла успешна!" +
-                                              $"\nСумма записанных чисел: {num}");
+                            
                             writer.Close();
                         }
                         catch (IOException e)
@@ -43,6 +46,22 @@ namespace Day17
                             break;
                         }
                     }
+                    var reader = new StreamReader(path);
+                    var arr = reader.ReadToEnd();
+                    var amount = 0;
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        if (arr[i].ToString() != ",")
+                        {
+                            amount += arr[i];
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    Console.WriteLine("Запись прошла успешна!\n" +
+                                      $"Сумма записанных чисел: {amount}");
                     break;
                 }
                 case 2:
