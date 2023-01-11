@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace Day18
 {
     [Serializable]
+    [XmlType]
     public abstract class Figure
     {
         public abstract double Perimeter();
