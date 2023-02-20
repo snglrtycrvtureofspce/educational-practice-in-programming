@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Devices>
+  <Device>
+    <Name>Keyboard</Name>
+    <Origin>China</Origin>
+    <Price>500</Price>
+    <Type>
+      <Item>peripheral</Item>
+      <Item>energy=5W</Item>
+      <Item>cooler=yes</Item>
+      <Item>I/O devices</Item>
+      <Item>USB</Item>
+    </Type>
+    <Critical>true</Critical>
+  </Device>
+  <Device>
+    <Name>Monitor</Name>
+    <Origin>Korea</Origin>
+    <Price>10000</Price>
+    <Type>
+      <Item>non-peripheral</Item>
+      <Item>energy=50W</Item>
+      <Item>cooler=no</Item>
+      <Item>multimedia devices</Item>
+      <Item>HDMI</Item>
+      <Item>VGA</Item>
+    </Type>
+    <Critical>false</Critical>
+  </Device>
+  <Device>
+    <Name>Printer</Name>
+    <Origin>USA</Origin>
+    <Price>2000</Price>
+    <Type>
+      <Item>peripheral</Item>
+      <Item>energy=30W</Item>
+      <Item>cooler=yes</Item>
+      <Item>I/O devices</Item>
+      <Item>USB</Item>
+      <Item>LPT</Item>
+    </Type>
+    <Critical>true</Critical>
+  </Device>
+  <Device>
+    <Name>Speaker</Name>
+    <Origin>Japan</Origin>
+    <Price>3000</Price>
+    <Type>
+      <Item>non-peripheral</Item>
+      <Item>energy=20W</Item>
+      <Item>cooler=no</Item>
+      <Item>multimedia devices</Item>
+      <Item>Bluetooth</Item>
+      <Item>3.5mm</Item>
+    </Type>
+    <Critical>false</Critical>
+  </Device>
+  <Device>
+    <Name>Mouse</Name>
+    <Origin>China</Origin>
+    <Price>800</Price>
+    <Type>
+      <Item>peripheral</Item>
+      <Item>energy=2W</Item>
+      <Item>cooler=no</Item>
+      <Item>I/O devices</Item>
+      <Item>USB</Item>
+    </Type>
+    <Critical>true</Critical>
+  </Device>
+  <Device>
+    <Name>xd</Name>
+    <Origin>xd</Origin>
+    <Price>22</Price>
+    <Type>
+      <Item>xd</Item>
+      <Item>20</Item>
+      <Item>xd</Item>
+      <Item>xd</Item>
+      <Item>xd</Item>
+    </Type>
+    <Critical>false</Critical>
+  </Device>
+</Devices>

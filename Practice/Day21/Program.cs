@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using System.Xml.Linq;
-using System.Threading;
+using System.Xml.XPath;
 
 namespace Day21
 {
@@ -10,27 +11,106 @@ namespace Day21
     {
         static void Main(string[] args)
         {
-            Console.Write("Меню программы:" +
+            while (true)
+            {
+                XDocument xDoc = XDocument.Load("devices.xml");
+                Console.Write("Меню программы:" +
                           "\n0 - Выход" +
                           "\n1 - Загрузка данных из XML-файла" +
                           "\n2 - Добавление узла" +
                           "\n3 - Удаление узла" +
                           "\n4 - Сохранение данных в формате XML-файла" +
+                          "\n5 - Вывод содержимого XML-файла на экран" +
                           "\nВыберите действие: ");
             var p = Convert.ToInt32(Console.ReadLine());
-            XDocument xDoc = XDocument.Load("devices.xml");
             switch (p)
             {
-                case 0:
+                case 0: // выход
                 {
+                    Console.Clear();
                     Console.WriteLine("Выход из программы...");
+                    return;
+                }
+                case 1: // загрузка данных из XML-файла
+                {
+                    XDocument.Load("devices.xml");
                     break;
                 }
-                case 1:
+                case 2: // добавление узла
                 {
                     try
                     {
-                        Console.WriteLine("Вывод данных из XML-файла: ");
+                        Console.Write("Введите название комплектующего: ");
+                        string name = Console.ReadLine();
+                        Console.Write("Введите страну производства: ");
+                        string origin = Console.ReadLine();
+                        Console.Write("Введите цену: ");
+                        double price = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Введите тип (перефирийное ли): ");
+                        string typeFirst = Console.ReadLine();
+                        Console.Write("Введите тип (энергопотребление (ватт): ");
+                        string typeSecond = Console.ReadLine();
+                        Console.Write("Введите тип (наличие кулера (есть либо нет)): ");
+                        string typeThird = Console.ReadLine();
+                        Console.Write("Введите тип (группа комплектующих (устройства ввода-вывода, мультимедийные)): ");
+                        string typeFourth = Console.ReadLine();
+                        Console.Write("Введите тип (порты (COM, USB, LPT)): ");
+                        string typeFifth = Console.ReadLine();
+                        Console.Write("Введите критично ли наличие комплектующего (0/1): ");
+                        bool critical = bool.Parse(Console.ReadLine());
+
+                        xDoc.Element("Devices").Add(
+                            new XElement("Device",
+                                new XElement("Name", name),
+                                new XElement("Origin", origin),
+                                new XElement("Price", price),
+                                new XElement("Type", 
+                                    new XElement("Item", typeFirst), 
+                                    new XElement("Item", typeSecond), 
+                                    new XElement("Item", typeThird), 
+                                    new XElement("Item", typeFourth), 
+                                    new XElement("Item", typeFifth)),
+                                new XElement("Critical", critical)
+                            )
+                        );
+                        xDoc.Save("devices.xml");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                        throw;
+                    }
+                    break;
+                }
+                case 3: // удаление узла
+                {
+                    Console.Write("Введите узел для удаления:");
+                    string node = Console.ReadLine();
+                    Console.Write("Введите параметр узла:");
+                    string parameter = Console.ReadLine();
+                    xDoc.Descendants("Device").Where(d => (string)d.Element(node) == parameter).Remove();
+                    xDoc.Save("devices.xml");
+                    break;
+                }
+                case 4: // сохранение данных в формате XML-файла
+                {
+                    try
+                    {
+                        Console.WriteLine("Данные сохранены в файл devices.xml...");
+                        xDoc.Save("devices.xml");
+                    }
+                    catch (System.IO.FileNotFoundException)
+                    {
+                        Console.WriteLine("Файл не был сохранён...");
+                        throw;
+                    }
+                    break;
+                }
+                case 5:
+                {
+                    try
+                    {
+                        Console.WriteLine("Вывод данных из XML-файла devices.xml: ");
                         Console.WriteLine(xDoc);
                     }
                     catch (System.IO.FileNotFoundException)
@@ -40,36 +120,98 @@ namespace Day21
                     }
                     break;
                 }
-                case 2:
+                case 6: 
+                /*
+                Используя XPath–язык XML-запросов осуществить фильтрацию
+                по заданному критерию. 
+                Результат запроса вывести на экран и записать в
+                новый XML-файл.
+                */
                 {
-                    try
+
+                    XPathDocument document = new XPathDocument("devices.xml");
+
+                    XPathNavigator navigator = document.CreateNavigator();
+
+                    Console.Write("Критерии для запроса" +
+                                      "\nВведите узел: ");
+                    string nodeLine = Console.ReadLine();
+                    Console.Write("Введите параметр:");
+                    string parameter = Console.ReadLine();
+                    XPathNodeIterator nodes = navigator.Select($"//Device[{nodeLine}='{parameter}']");
+
+                    while (nodes.MoveNext())
                     {
-                        Console.Write("Введите название комплектующего: ");
-                        string name = Console.ReadLine();
-                        Console.Write("Введите страну производства: ");
-                        string origin = Console.ReadLine();
-                        Console.Write("Введите цену: ");
-                        var price = Console.ReadLine();
-                        Console.Write("Введите название комплектующего: ");
-                        var type = Console.ReadLine();
-                        xDoc.Element("Devices").Add(
-                            new XElement("Device",
-                                new XElement("Name", name),
-                                new XElement("Origin", origin),
-                                new XElement("Price", 15000),
-                                new XElement("Type", new XElement("Item", "non-peripheral")),
-                                new XElement("Critical", false)
-                            )
-                        );
+                        Console.WriteLine(nodes.Current.OuterXml);
                     }
-                    catch (Exception e)
+
+                    XmlDocument result = new XmlDocument();
+                    result.LoadXml("<Devices></Devices>");
+
+                    foreach (XPathNavigator node in nodes)
                     {
-                        Console.WriteLine(e);
-                        throw;
+                        result.DocumentElement.AppendChild(result.ImportNode(node.UnderlyingObject as XmlNode, true));
                     }
+
+                    result.Save($"{nodeLine}_devices.xml");
+
                     break;
                 }
-                case 5:
+                case 7:
+                    /*
+                    Используя LINQ to XML осуществить поиск, 
+                    упорядочивание данных по возрастанию/убыванию 
+                    и группировку согласно заданным критериям.
+                    */
+                {
+                    Console.Write("Введите страну производства: ");
+                    string origin = Console.ReadLine();
+                    Console.Write("Введите минимальную цену: ");
+                    int minPrice = int.Parse(Console.ReadLine());
+                    Console.Write("Введите тип комплектующего: ");
+                    string type = Console.ReadLine();
+                    Console.Write("Введите критерий упорядочивания (возрастания или убывания): ");
+                    string orderBy = Console.ReadLine();
+                    Console.Write("Введите критерий группировки (например, порты): ");
+                    string groupBy = Console.ReadLine();
+                    Console.Write("Введите значение критического комплектующего (true или false): ");
+                    bool critical = bool.Parse(Console.ReadLine());
+
+                    XDocument doc = XDocument.Load("devices.xml");
+
+                    var query = from device in doc.Descendants("Device")
+                        where (string)device.Element("Origin") == origin &&
+                              (int)device.Element("Price") > minPrice &&
+                              device.Elements("Type").Any(t => (string)t == type)
+                        select device;
+
+                    switch (orderBy) // Упорядочивание элементов
+                    {
+                        case "возрастания":
+                            query = query.OrderBy(d => (int)d.Element("Price"));
+                            break;
+                        case "убывания":
+                            query = query.OrderByDescending(d => (int)d.Element("Price"));
+                            break;
+                    }
+
+                    // Группировка элементов
+                    var groupedQuery = from device in query
+                        group device by device.Element(groupBy).Value
+                        into g
+                        select new XElement("Group", new XAttribute("name", g.Key), g);
+
+                    // Преобразование в XML с корневым элементом Critical
+                    XElement root = new XElement("Critical", groupedQuery);
+                    root.SetAttributeValue("value", critical.ToString());
+
+                    // Сохранение в файл
+                    root.Save("result.xml");
+
+                    Console.WriteLine("Результат сохранен в файл result.xml");
+                    break;
+                }
+                case 1001:
                 {
                     List<Device> devices = new List<Device>
                     {
@@ -120,8 +262,7 @@ namespace Day21
                         }
                     };
 
-                    xDoc = new XDocument(
-                        new XDeclaration("1.0", "utf-8", "yes"),
+                    xDoc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"),
                         new XElement("Devices",
                             from device in devices
                             select new XElement("Device",
@@ -137,6 +278,7 @@ namespace Day21
                     xDoc.Save("devices.xml");
                     break;
                 }
+            }
             }
         }
     }
