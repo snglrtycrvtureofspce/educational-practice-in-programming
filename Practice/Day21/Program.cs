@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Schema;
 using System.Xml.XPath;
 
 namespace Day21
@@ -21,6 +22,9 @@ namespace Day21
                           "\n3 - Удаление узла" +
                           "\n4 - Сохранение данных в формате XML-файла" +
                           "\n5 - Вывод содержимого XML-файла на экран" +
+                          "\n6 - Фильтрация по заданному критерию (XPath–язык)" +
+                          "\n7 - Поиск, упорядочивание данных по возрастанию/убыванию и группировка согласно заданным критериям." +
+                          "\n8 - Задать схему XSD для созданного файла XML." +
                           "\nВыберите действие: ");
             var p = Convert.ToInt32(Console.ReadLine());
             switch (p)
@@ -106,7 +110,7 @@ namespace Day21
                     }
                     break;
                 }
-                case 5:
+                case 5: // вывод содержимого XML-файла на экран
                 {
                     try
                     {
@@ -209,6 +213,33 @@ namespace Day21
                     root.Save("result.xml");
 
                     Console.WriteLine("Результат сохранен в файл result.xml");
+                    break;
+                }
+                case 8:
+                {
+                    try
+                    {
+                        XmlDocument xmlDocument = new XmlDocument();
+                        xmlDocument.Load("devices.xml");
+
+                        XmlSchemaSet xmlSchema = new XmlSchemaSet();
+                        xmlSchema.Add(null, "devices.xsd");
+
+                        xmlDocument.Schemas = xmlSchema;
+                        xmlDocument.Validate((sender, e) =>
+                        {
+                            if (e.Severity == XmlSeverityType.Error)
+                            {
+                                Console.WriteLine($"Error: {e.Message}");
+                            }
+                        });
+
+                        Console.WriteLine("XML-файл успешно проверен по XSD-схеме.");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Ошибка: {e.Message}");
+                    }
                     break;
                 }
                 case 1001:

@@ -69,15 +69,15 @@
     <Critical>true</Critical>
   </Device>
   <Device>
-    <Name>xd</Name>
-    <Origin>xd</Origin>
-    <Price>22</Price>
+    <Name>test</Name>
+    <Origin>test</Origin>
+    <Price>2000</Price>
     <Type>
-      <Item>xd</Item>
-      <Item>20</Item>
-      <Item>xd</Item>
-      <Item>xd</Item>
-      <Item>xd</Item>
+      <Item>test</Item>
+      <Item>test</Item>
+      <Item>test</Item>
+      <Item>test</Item>
+      <Item>false</Item>
     </Type>
     <Critical>false</Critical>
   </Device>

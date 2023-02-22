@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Devices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Device" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string"/>
+              <xs:element name="Origin" type="xs:string"/>
+              <xs:element name="Price" type="xs:nonNegativeInteger"/>
+              <xs:element name="Type">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Item" type="xs:string" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                  <xs:attribute name="energy" type="xs:string"/>
+                  <xs:attribute name="cooler" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Critical" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
