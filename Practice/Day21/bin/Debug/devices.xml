@@ -6,8 +6,8 @@
     <Price>500</Price>
     <Type>
       <Item>peripheral</Item>
-      <Item>energy=5W</Item>
-      <Item>cooler=yes</Item>
+      <Item>energy=15W</Item>
+      <Item>cooler=no</Item>
       <Item>I/O devices</Item>
       <Item>USB</Item>
     </Type>
@@ -15,11 +15,11 @@
   </Device>
   <Device>
     <Name>Monitor</Name>
-    <Origin>Korea</Origin>
-    <Price>10000</Price>
+    <Origin>China</Origin>
+    <Price>10</Price>
     <Type>
       <Item>non-peripheral</Item>
-      <Item>energy=50W</Item>
+      <Item>energy=520W</Item>
       <Item>cooler=no</Item>
       <Item>multimedia devices</Item>
       <Item>HDMI</Item>
