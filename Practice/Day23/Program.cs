@@ -352,12 +352,10 @@ namespace Day23
                 }
             }
         }
-
         static async Task<string> LookupWordAsync(string word)
         {
             Console.WriteLine($"Поиск в '{word}' в словаре асинхронности...");
 
-            // Create a task to run the synchronous version of the method
             return await Task.Run(() => LookupWord3(word));
         }
 
