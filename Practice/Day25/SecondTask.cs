@@ -26,18 +26,14 @@ namespace Day25
 
         private void inputToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            InputForm inputForm = new InputForm();
+            inputForm.Show();
+            this.Hide();
         }
-
-        private void calcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Привет! Меня зовут Саша, мне 18 лет.");
+            MessageBox.Show("Привет! Меня зовут Саша, мне 18 лет.", "About", MessageBoxButtons.OK);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

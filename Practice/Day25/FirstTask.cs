@@ -39,30 +39,30 @@ namespace Day25
                 {
                     if (num1 > num2)
                     {
-                        resultLabel.Text = "Первое число больше второго";
+                        resultLabel.Text = "Первое число больше второго.";
                     }
                     else if (num1 < num2)
                     {
-                        resultLabel.Text = "Второе число больше первого";
+                        resultLabel.Text = "Второе число больше первого.";
                     }
                     else
                     {
-                        resultLabel.Text = "Числа равны";
+                        resultLabel.Text = "Числа равны.";
                     }
                 }
                 else
                 {
                     if (!isValidNum1 && !isValidNum2)
                     {
-                        resultLabel.Text = "Введите числа в оба поля";
+                        resultLabel.Text = "Введите числа в оба поля!";
                     }
                     else if (!isValidNum1)
                     {
-                        resultLabel.Text = "Некорректное значение в первом поле";
+                        resultLabel.Text = "Некорректное значение в первом поле!";
                     }
                     else if (!isValidNum2)
                     {
-                        resultLabel.Text = "Некорректное значение во втором поле";
+                        resultLabel.Text = "Некорректное значение во втором поле!";
                     }
                 }
             }
@@ -73,7 +73,7 @@ namespace Day25
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
             this.tb1.Clear();
             this.tb2.Clear();

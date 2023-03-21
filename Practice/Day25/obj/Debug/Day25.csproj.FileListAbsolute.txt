@@ -12,3 +12,4 @@ C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\P
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day25\obj\Debug\Day25.FirstTask.resources
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day25\obj\Debug\Day25.SecondTask.resources
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day25\obj\Debug\Day25.InputForm.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day25\obj\Debug\Day25.CalcForm.resources
