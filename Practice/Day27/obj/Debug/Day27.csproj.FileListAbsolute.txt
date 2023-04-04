@@ -1,0 +1,12 @@
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.csproj.AssemblyReference.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.csproj.SuggestedBindingRedirects.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.Properties.Resources.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.csproj.GenerateResource.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.csproj.CoreCompileInputs.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\bin\Debug\Day27.exe.config
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\bin\Debug\Day27.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\bin\Debug\Day27.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.MainForm.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.Task1.resources
