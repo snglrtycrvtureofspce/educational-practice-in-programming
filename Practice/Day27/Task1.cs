@@ -19,18 +19,22 @@ namespace Day27
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            foreach (string str in listBox1.Items)
-            {
-                // подсчитываем количество слов в строке
-                int wordCount = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count();
-                // выводим результат в метку Label1
-                ResultLabel.Text = "Количество слов в строке '" + str + "': " + wordCount + "\n";
+            string str = listBox1.SelectedItem.ToString();
 
-                // формируем новую строку, содержащую символы на четных местах в обратном порядке
-                string newStr = new string(str.Where((c, i) => i % 2 == 0).Reverse().ToArray());
-                // выводим результат в метку Label2
-                Result2Label.Text = "Новая строка для '" + str + "': " + newStr + "\n";
-            }
+            // подсчитываем количество слов в строке
+            int wordCount = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count();
+            ResultLabel.Text = "Количество слов в строке '" + str + "': " + wordCount + "\n";
+
+            string newStr = new string(str.Where((c, i) => i % 2 == 0).Reverse().ToArray());
+
+            Result2Label.Text = "Новая строка для '" + str + "': " + newStr + "\n";
+        }
+
+        private void Task1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
     }
 }

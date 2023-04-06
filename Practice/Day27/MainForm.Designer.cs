@@ -32,8 +32,8 @@
             this.МенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.задание1СтрокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.задание2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.задание3ЦиклыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.задание4КлассыОбъектыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задание3МатрицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задание4ГрафикиФункцийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,8 +52,8 @@
             this.МенюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.задание1СтрокиToolStripMenuItem,
             this.задание2ToolStripMenuItem,
-            this.задание3ЦиклыToolStripMenuItem,
-            this.задание4КлассыОбъектыToolStripMenuItem});
+            this.задание3МатрицыToolStripMenuItem,
+            this.задание4ГрафикиФункцийToolStripMenuItem});
             this.МенюToolStripMenuItem.Name = "МенюToolStripMenuItem";
             this.МенюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.МенюToolStripMenuItem.Text = "Меню";
@@ -61,27 +61,30 @@
             // задание1СтрокиToolStripMenuItem
             // 
             this.задание1СтрокиToolStripMenuItem.Name = "задание1СтрокиToolStripMenuItem";
-            this.задание1СтрокиToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.задание1СтрокиToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.задание1СтрокиToolStripMenuItem.Text = "Задание 1 (Строки)";
             this.задание1СтрокиToolStripMenuItem.Click += new System.EventHandler(this.задание1СтрокиToolStripMenuItem_Click);
             // 
             // задание2ToolStripMenuItem
             // 
             this.задание2ToolStripMenuItem.Name = "задание2ToolStripMenuItem";
-            this.задание2ToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.задание2ToolStripMenuItem.Text = "Задание 2 (Ветвление)";
+            this.задание2ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.задание2ToolStripMenuItem.Text = "Задание 2 (Одномерный массив)";
+            this.задание2ToolStripMenuItem.Click += new System.EventHandler(this.задание2ToolStripMenuItem_Click);
             // 
-            // задание3ЦиклыToolStripMenuItem
+            // задание3МатрицыToolStripMenuItem
             // 
-            this.задание3ЦиклыToolStripMenuItem.Name = "задание3ЦиклыToolStripMenuItem";
-            this.задание3ЦиклыToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.задание3ЦиклыToolStripMenuItem.Text = "Задание 3 (Циклы)";
+            this.задание3МатрицыToolStripMenuItem.Name = "задание3МатрицыToolStripMenuItem";
+            this.задание3МатрицыToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.задание3МатрицыToolStripMenuItem.Text = "Задание 3 (Матрицы)";
+            this.задание3МатрицыToolStripMenuItem.Click += new System.EventHandler(this.задание3МатрицыToolStripMenuItem_Click);
             // 
-            // задание4КлассыОбъектыToolStripMenuItem
+            // задание4ГрафикиФункцийToolStripMenuItem
             // 
-            this.задание4КлассыОбъектыToolStripMenuItem.Name = "задание4КлассыОбъектыToolStripMenuItem";
-            this.задание4КлассыОбъектыToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.задание4КлассыОбъектыToolStripMenuItem.Text = "Задание 4 (Классы.Объекты)";
+            this.задание4ГрафикиФункцийToolStripMenuItem.Name = "задание4ГрафикиФункцийToolStripMenuItem";
+            this.задание4ГрафикиФункцийToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.задание4ГрафикиФункцийToolStripMenuItem.Text = "Задание 4 (Графики функций)";
+            this.задание4ГрафикиФункцийToolStripMenuItem.Click += new System.EventHandler(this.задание4ГрафикиФункцийToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -107,8 +110,8 @@
         private System.Windows.Forms.ToolStripMenuItem МенюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem задание1СтрокиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem задание2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem задание3ЦиклыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem задание4КлассыОбъектыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem задание3МатрицыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem задание4ГрафикиФункцийToolStripMenuItem;
     }
 }
 

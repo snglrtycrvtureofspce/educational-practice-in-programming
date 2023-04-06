@@ -10,3 +10,6 @@ C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\P
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.pdb
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.MainForm.resources
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.Task1.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.Task2.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.Task3.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day27\obj\Debug\Day27.Task4.resources

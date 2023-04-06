@@ -1,0 +1,16 @@
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\bin\Debug\Day28.exe.config
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\bin\Debug\Day28.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\bin\Debug\Day28.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.csproj.AssemblyReference.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.csproj.SuggestedBindingRedirects.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.MainForm.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.Properties.Resources.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.csproj.GenerateResource.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.csproj.CoreCompileInputs.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.Task1.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.Task2.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.Task3.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.Task4.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day28\obj\Debug\Day28.Task5.resources

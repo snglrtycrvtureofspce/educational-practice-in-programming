@@ -51,7 +51,7 @@
             // 
             this.ResultLabel.AutoSize = true;
             this.ResultLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResultLabel.Location = new System.Drawing.Point(348, 230);
+            this.ResultLabel.Location = new System.Drawing.Point(94, 303);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.Size = new System.Drawing.Size(76, 21);
             this.ResultLabel.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.Result2Label.AutoSize = true;
             this.Result2Label.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Result2Label.Location = new System.Drawing.Point(348, 259);
+            this.Result2Label.Location = new System.Drawing.Point(94, 332);
             this.Result2Label.Name = "Result2Label";
             this.Result2Label.Size = new System.Drawing.Size(76, 21);
             this.Result2Label.TabIndex = 3;
@@ -89,6 +89,7 @@
             this.Name = "Task1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Task1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
