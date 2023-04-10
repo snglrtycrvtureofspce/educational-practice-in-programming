@@ -1,0 +1,67 @@
+﻿<Window x:Class="Day29.FirstTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day29"
+        Title="FirstTask" Height="500" Width="1100" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+            <Button Content="Открыть" Margin="5"/>
+            <Button Content="Сохранить" Margin="5"/>
+            <Button Content="Закрыть" Margin="5"/>
+            <Button Content="Обработать" Margin="5"/>
+            <Button Content="О программе" Margin="5"/>
+        </StackPanel>
+
+        <ListBox x:Name="DocumentsListBox" Grid.Column="0" Grid.Row="1"
+                 SelectedItem="{Binding SelectedDocument}" SelectionChanged="DocumentsListBox_SelectionChanged">
+            <Label Content="Последние документы"/>
+            <Label Content="1.txt"/>
+            <Label Content="2.txt"/>
+            <Label Content="3.txt"/>
+            <Label Content="4.txt"/>
+            <Label Content="5.txt"/>
+            <Label Content="6.txt"/>
+        </ListBox>
+
+
+        <UniformGrid Columns="6" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+            <UniformGrid.Resources>
+                <Style TargetType="Rectangle">
+                    <Setter Property="Stroke" Value="Black"/>
+                    <Setter Property="Height" Value="100"/>
+                    <Setter Property="Width" Value="100"/>
+                </Style>
+            </UniformGrid.Resources>
+            <Rectangle Fill="{Binding Rectangle1Color}" Margin="5"/>
+            <Rectangle Fill="{Binding Rectangle2Color}" Margin="5"/>
+            <Rectangle Fill="{Binding Rectangle3Color}" Margin="5"/>
+            <Rectangle Fill="{Binding Rectangle4Color}" Margin="5"/>
+            <Rectangle Fill="{Binding Rectangle5Color}" Margin="5"/>
+            <Rectangle Fill="{Binding Rectangle6Color}" Margin="5"/>
+        </UniformGrid>
+
+        <UniformGrid Columns="6" Grid.Column="1" Margin="5,188,-5,224" Grid.Row="1">
+            <UniformGrid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </UniformGrid.Resources>
+            <Label Content="A" Margin="5"/>
+            <Label Content="B" Margin="5"/>
+            <Label Content="C" Margin="5"/>
+            <Label Content="D" Margin="5"/>
+            <Label Content="E" Margin="5"/>
+            <Label Content="F" Margin="5"/>
+        </UniformGrid>
+    </Grid>
+</Window>
