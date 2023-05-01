@@ -20,3 +20,5 @@ C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\P
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day29\obj\Debug\FirstTask.baml
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day29\obj\Debug\SecondTask.baml
 C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day29\obj\Debug\ThirdTask.baml
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day29\obj\Debug\Window1.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\educational-practice-in-programming\Practice\Day29\obj\Debug\Window1.baml

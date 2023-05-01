@@ -10,7 +10,7 @@
         <Canvas Name="canvas" Background="White" MouseLeftButtonDown="canvas_MouseLeftButtonDown"
                 MouseLeftButtonUp="canvas_MouseLeftButtonUp" MouseMove="canvas_MouseMove"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-            <ComboBox Name="brushColor" Width="80" Height="25" Margin="0 0 10 0">
+            <ComboBox Name="brushColor" Width="80" Height="25" Margin="0 0 10 0" SelectionChanged="brushColor_SelectionChanged_1">
                 <ComboBoxItem>Black</ComboBoxItem>
                 <ComboBoxItem>Red</ComboBoxItem>
                 <ComboBoxItem>Green</ComboBoxItem>

@@ -86,5 +86,15 @@ namespace Day29
             drawingMode.IsChecked = false;
             editingMode.IsChecked = false;
         }
+
+        private void BrushSizesSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            brushSize = (int)BrushSizesSlider.Value;
+        }
+
+        private void brushColor_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
