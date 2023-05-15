@@ -1,0 +1,38 @@
+﻿<Page x:Class="Day31.ProductPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day31"
+        mc:Ignorable="d"
+        Title="ProductPage" Height="450" Width="800">
+    <Page.Resources>
+        <Style TargetType="ListView">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <StackPanel>
+            <Button Content="Загрузка товаров из файла" Click="LoadProductsFromFile_Click" Margin="10"/>
+            <ListView ItemsSource="{Binding Products}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Code}"/>
+                            <TextBlock Text="{Binding Name}" Margin="10,0"/>
+                            <TextBlock Text="{Binding Unit}" Margin="10,0"/>
+                            <TextBlock Text="{Binding Price}" Margin="10,0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>
