@@ -42,7 +42,6 @@ namespace Day31
         {
             try
             {
-                // Чтение данных из файла и добавление товаров в список Products
                 using (StreamReader reader = new StreamReader(filePath))
                 {
                     string line;
@@ -56,7 +55,6 @@ namespace Day31
                             string unit = parts[2].Trim();
                             if (decimal.TryParse(parts[3].Trim(), out decimal price))
                             {
-                                // Создание нового объекта Product и добавление его в список Products
                                 Product product = new Product
                                 {
                                     Code = code,
@@ -65,6 +63,7 @@ namespace Day31
                                     Price = price
                                 };
                                 Products.Add(product);
+                                
                             }
                         }
                     }
